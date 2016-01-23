@@ -22,9 +22,9 @@ window.Uno = Uno =
       postDate = $(this).html()
       postDateInDays = Math.floor((Date.now() - new Date(postDate)) / 86400000)
 
-      if postDateInDays is 0 then postDateInDays = 'today'
-      else if postDateInDays is 1 then postDateInDays = 'yesterday'
-      else postDateInDays = "#{postDateInDays} days ago"
+      if postDateInDays is 0 then postDateInDays = "aujourd'hui"
+      else if postDateInDays is 1 then postDateInDays = 'hier'
+      else postDateInDays = "il y #{postDateInDays} jours"
 
       $(this).html(postDateInDays)
       $(this).mouseover -> $(this).html postDate
